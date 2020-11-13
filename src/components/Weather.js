@@ -181,6 +181,13 @@ export default function Weather(props) {
               <img src={randomcoverWeather} alt="sunny funny weather" />
             </div>
           ) : null}
+           {props.weather.current.temp_f >= "39" && //Cover weather
+          props.weather.current.temp_f <= "49" &&
+          props.weather.current.condition.text === "Overcast" ? (
+            <div className="meme-container">
+              <img src={randomcoverWeather} alt="sunny funny weather" />
+            </div>
+          ) : null}
           <div className="weather-container">
             <p>Temp: {props.weather.current.temp_f}f</p>
             <p>Condition: {props.weather.current.condition.text}</p>
