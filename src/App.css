@@ -1,0 +1,15 @@
+body{
+    background-image:url('http://bestanimations.com/media/nature/1774628440river-water-cascading-over-big-rocks-forest-nature-animated-gif.gif');
+    background-repeat:no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color:white;
+    background-position: center center;
+    min-height: 100%;
+    background-attachment: fixed;
+
+
+
+}
