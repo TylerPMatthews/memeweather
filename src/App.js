@@ -4,6 +4,7 @@ import Weather from "./components/Weather";
 import axios from "axios";
 import styled from 'styled-components';
 const StyledApp = styled.div`
+
 h2{
   color:red;
   text-align:center;
