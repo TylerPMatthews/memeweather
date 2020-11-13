@@ -156,7 +156,8 @@ export default function Weather(props) {
 
           {props.weather.current.condition.text === "Rain" || //rain
           props.weather.current.condition.text === "Light rain" ||
-          props.weather.current.condition.text === "Heavy rain" ? (
+          props.weather.current.condition.text === "Heavy rain" ||
+          props.weather.current.condition.text === "Mist" ? (
             <div className="meme-container">
               <img src={randomRain} alt="snow funny weather" />
             </div>
@@ -167,6 +168,13 @@ export default function Weather(props) {
           props.weather.current.condition.text === "Sunny" ? (
             <div className="meme-container">
               <img src={randomcoverWeather} alt="sunny funny weather" />
+            </div>
+          ) : null}
+            {props.weather.current.temp_f >= "39" && //Cover Weather
+          props.weather.current.temp_f <= "49" &&
+          props.weather.current.condition.text === "Clear" ? (
+            <div className="meme-container">
+              <img src={randomcoverWeather} alt="Clear funny weather" />
             </div>
           ) : null}
           {props.weather.current.temp_f >= "39" && //Cover weather
@@ -183,15 +191,13 @@ export default function Weather(props) {
               <img src={randomcoverWeather} alt="sunny funny weather" />
             </div>
           ) : null}
-          {props.weather.current.temp_f >= "39" && //Cover weather
-          props.weather.current.temp_f <= "49" &&
-          props.weather.current.condition.text === "Overcast" ? (
+          {props.weather.current.condition.text === "Overcast" ? (
             <div className="meme-container">
               <img src={randomcoverWeather} alt="sunny funny weather" />
             </div>
           ) : null}
           <div className="weather-container">
-            <p>Temp: {props.weather.current.temp_f}f</p>
+            <p>Temp: {Math.round(props.weather.current.temp_f)}f</p>
             <p>Condition: {props.weather.current.condition.text}</p>
             <div className="img-container">
               <img
@@ -202,7 +208,7 @@ export default function Weather(props) {
             <p>Wind MPH: {props.weather.current.wind_mph} mph</p>
             <p>Wind Direction: {props.weather.current.wind_dir}</p>
             <p>Humidity: {props.weather.current.humidity} %</p>
-            <p>Feels like: {props.weather.current.feelslike_f} f</p>
+            <p>Feels like: {Math.round(props.weather.current.feelslike_f)} f</p>
           </div>
         </div>
       </main>
