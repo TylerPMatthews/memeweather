@@ -47,7 +47,7 @@ function App() {
     if (evt.key === "Enter") {
       axios
         .get(
-          `http://api.weatherapi.com/v1/forecast.json?key=10cae7ec92fa4e47ac933047200611&q=${query}&days=1 `
+          `https://api.weatherapi.com/v1/forecast.json?key=10cae7ec92fa4e47ac933047200611&q=${query}&days=1 `
         )
         .then((res) => {
           setQuery("");
