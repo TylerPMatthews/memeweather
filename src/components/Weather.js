@@ -27,9 +27,9 @@ const StyledWeather = styled.div`
     margin-bottom: 3%;
   }
 
-  .weather-container img{
-    width:5rem;
-    height:5rem;
+  .weather-container img {
+    width: 5rem;
+    height: 5rem;
   }
 `;
 
@@ -147,14 +147,16 @@ export default function Weather(props) {
             </div>
           ) : null}
           {props.weather.current.condition.text === "Snow" ||
-          props.weather.current.condition.text === "Light snow" ? ( //Snow
+          props.weather.current.condition.text === "Light snow" ||
+          props.weather.current.condition.text === "Heavy snow" ? ( //Snow
             <div className="meme-container">
               <img src={randomSnow} alt="snow funny weather" />
             </div>
           ) : null}
 
           {props.weather.current.condition.text === "Rain" || //rain
-          props.weather.current.condition.text === "Light rain" ? (
+          props.weather.current.condition.text === "Light rain" ||
+          props.weather.current.condition.text === "Heavy rain" ? (
             <div className="meme-container">
               <img src={randomRain} alt="snow funny weather" />
             </div>
@@ -181,7 +183,7 @@ export default function Weather(props) {
               <img src={randomcoverWeather} alt="sunny funny weather" />
             </div>
           ) : null}
-           {props.weather.current.temp_f >= "39" && //Cover weather
+          {props.weather.current.temp_f >= "39" && //Cover weather
           props.weather.current.temp_f <= "49" &&
           props.weather.current.condition.text === "Overcast" ? (
             <div className="meme-container">
