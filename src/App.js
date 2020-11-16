@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import "./App.css";
 import Weather from "./components/Weather";
 import axios from "axios";
 import styled from 'styled-components';
+const subButton = document.querySelector('submit-button button')
 const StyledApp = styled.div`
 
 h2{
@@ -27,6 +28,7 @@ input{
   text-align:center;
   margin-top:15%;
   font-size:1.5rem;
+  color:red;
 }
 .code{
   display:flex;
@@ -73,10 +75,12 @@ function App() {
           value={query}
           onKeyPress={search}
         ></input>
-      </div>
+        </div>
+       
       {weather === undefined ? (
         <div className='no-weather'>
         <p>No weather to display</p>
+        <p>Press the Enter key to send City,State</p>
         </div>
       ) : (
       

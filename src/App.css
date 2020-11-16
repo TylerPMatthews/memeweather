@@ -1,5 +1,5 @@
 body{
-    background-image:url('http://bestanimations.com/media/nature/1774628440river-water-cascading-over-big-rocks-forest-nature-animated-gif.gif');
+    background-image:url('http://bestanimations.com/media/mountains/749248417sun-peaking-through-clouds-mountains-nature-animated-gif.gif');
     background-repeat:no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -13,3 +13,13 @@ body{
 
 
 }
+@media only screen and (min-width: 600px) {
+   h2{
+       font-size:2.5rem;
+   }
+    .no-weather p{
+        color:red;
+        font-size:2.5rem;
+        
+    }
+  }
