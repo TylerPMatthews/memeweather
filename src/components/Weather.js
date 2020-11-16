@@ -134,14 +134,20 @@ export default function Weather(props) {
             </div>
           ) : null}
 
-          {props.weather.current.temp_f > "50" &&
+          {props.weather.current.temp_f > "49" &&
           props.weather.current.condition.text === "Sunny" ? ( //Sunny warm weather
             <div className="meme-container">
               <img src={randomNiceDay} alt="sunny funny weather" />
             </div>
           ) : null}
-          {props.weather.current.temp_f > "50" &&
+          {props.weather.current.temp_f > "49" &&
           props.weather.current.condition.text === "Partly cloudy" ? ( //pCloudy warm weather
+            <div className="meme-container">
+              <img src={randomNiceDay} alt="sunny funny weather" />
+            </div>
+          ) : null}
+               {props.weather.current.temp_f > "49" &&
+          props.weather.current.condition.text === "Clear" ? ( //Clear warm weather
             <div className="meme-container">
               <img src={randomNiceDay} alt="sunny funny weather" />
             </div>
