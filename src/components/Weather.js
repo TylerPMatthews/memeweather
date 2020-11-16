@@ -104,7 +104,6 @@ const coverWeather = [
   "https://cdn.guff.com/site_0/media/33000/32179/items/072619be3f312eda10254537.jpg",
   "https://img.memecdn.com/weather-stone_o_2629693.jpg",
   "https://img.memecdn.com/a-rainbow-holds-back-the-bad-weather_o_1391083.jpg",
-  "http://www.memecenter.com/fun/1826095/meanwhile-in-germany",
 
 
 
