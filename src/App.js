@@ -3,7 +3,6 @@ import "./App.css";
 import Weather from "./components/Weather";
 import axios from "axios";
 import styled from 'styled-components';
-const subButton = document.querySelector('submit-button button')
 const StyledApp = styled.div`
 
 h2{
@@ -38,6 +37,9 @@ button{
   font-size:1.2rem;
   border-radius:12px;
   margin-bottom:5%;
+  color:red;
+  background-color:black;
+  border-color:red;
 }
 
 
@@ -80,7 +82,7 @@ function App() {
       {weather === undefined ? (
         <div className='no-weather'>
         <p>No weather to display</p>
-        <p>Press the Enter key to send City,State</p>
+        <p>Press the Enter key to submit City,State</p>
         </div>
       ) : (
       
