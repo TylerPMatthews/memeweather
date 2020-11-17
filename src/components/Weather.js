@@ -198,7 +198,8 @@ export default function Weather(props) {
           {props.weather.current.condition.text === "Snow" ||
           props.weather.current.condition.text === "Light snow" ||
           props.weather.current.condition.text === "Heavy snow" ||
-          props.weather.current.condition.text === "Patchy light snow" ? ( //Snow
+          props.weather.current.condition.text === "Patchy light snow" || 
+          props.weather.current.condition.text === "Blizzard" ? ( //Snow
             <div className="meme-container">
               <img src={randomSnow} alt="snow funny weather" />
             </div>
