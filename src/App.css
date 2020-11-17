@@ -1,5 +1,5 @@
 body{
-    background-image:url('http://bestanimations.com/media/mountains/749248417sun-peaking-through-clouds-mountains-nature-animated-gif.gif');
+    background-image:url('https://media2.giphy.com/media/3o72EZplI5RBdJU17q/giphy.gif?cid=ecf05e479a512e566a5594080b68113a2709e6ea031c0361&rid=giphy.gif');
     background-repeat:no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -19,7 +19,19 @@ body{
    }
     .no-weather p{
         color:red;
-        font-size:2.5rem;
+        font-size:1.5rem;
         
     }
   }
+
+  @media only screen and (min-width: 1000px) {
+    h2{
+        font-size:2.5rem;
+    }
+     .no-weather p{
+         font-size:2rem;
+         
+     }
+
+   }
+ 
