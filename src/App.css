@@ -1,5 +1,5 @@
 body{
-    background-image:url('https://media2.giphy.com/media/3o72EZplI5RBdJU17q/giphy.gif?cid=ecf05e479a512e566a5594080b68113a2709e6ea031c0361&rid=giphy.gif');
+    background-image:url('https://media2.giphy.com/media/AhKrLK7kDZmHWHdH3i/giphy.gif?cid=ecf05e47625f96930e88b02813cdc78bf5facfc7e5ef5e63&rid=giphy.gif');
     background-repeat:no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -9,6 +9,7 @@ body{
     background-position: center center;
     min-height: 100%;
     background-attachment: fixed;
+    background-position-x: right;
 
 
 

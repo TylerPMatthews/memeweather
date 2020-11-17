@@ -6,10 +6,12 @@ const StyledWeather = styled.div`
   }
   p {
     text-align: center;
+    color:black;
   }
   .date-container {
     display: flex;
     justify-content: center;
+    color:black;
   }
   .img-container {
     display: flex;
@@ -195,7 +197,8 @@ export default function Weather(props) {
           ) : null}
           {props.weather.current.condition.text === "Snow" ||
           props.weather.current.condition.text === "Light snow" ||
-          props.weather.current.condition.text === "Heavy snow" ? ( //Snow
+          props.weather.current.condition.text === "Heavy snow" ||
+          props.weather.current.condition.text === "Patchy light snow" ? ( //Snow
             <div className="meme-container">
               <img src={randomSnow} alt="snow funny weather" />
             </div>
