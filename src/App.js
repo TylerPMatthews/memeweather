@@ -8,7 +8,7 @@ const StyledApp = styled.div`
     color: red;
     text-align: center;
     margin-top: 5%;
-    font-family: 'Architects Daughter', cursive;
+    font-family: "Architects Daughter", cursive;
   }
   .search-box {
     display: flex;
@@ -28,7 +28,7 @@ const StyledApp = styled.div`
     color: red;
     margin-right: 5%;
     margin-left: 5%;
-    font-family: 'Architects Daughter', cursive;
+    font-family: "Architects Daughter", cursive;
   }
   .code {
     display: flex;
@@ -41,19 +41,21 @@ const StyledApp = styled.div`
     color: red;
     background-color: black;
     border-color: red;
-    font-family: 'Architects Daughter', cursive;
+    font-family: "Architects Daughter", cursive;
   }
   button:hover {
     color: white;
-    border-color:white;
+    border-color: white;
+  }
+  footer p {
+    text-align: center;
+    font-family: "Architects Daughter", cursive;
+    color: black;
+  }
 
-  }
-  footer p{
-    text-align:center;
-    font-family: 'Architects Daughter', cursive;
-    color:black;
-  }
-`;
+
+
+ `
 function App() {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState();
