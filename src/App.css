@@ -11,6 +11,8 @@ body{
     background-attachment: fixed;
     background-position-x:right;
     background-clip: padding-box;
+    background-position-x:right;
+    background-clip: padding-box;
 
 
 }
