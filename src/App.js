@@ -52,42 +52,43 @@ const StyledApp = styled.div`
     font-family: "Architects Daughter", cursive;
     color: black;
   }
-
-
-
- `
+`;
 function App() {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState();
   const search = (evt) => {
-    if (evt.key === "Enter") {
-      axios
-        .get(
-          `https://api.weatherapi.com/v1/forecast.json?key=10cae7ec92fa4e47ac933047200611&q=${query}&days=1 `
-        )
-        .then((res) => {
-          setQuery("");
-          const weatherData = res.data;
-          setWeather(weatherData);
-        })
-        .catch((err) => {
-          console.log("error");
-        });
-    }
+    axios
+      .get(
+        `https://api.weatherapi.com/v1/forecast.json?key=10cae7ec92fa4e47ac933047200611&q=${query}&days=1 `
+      )
+      .then((res) => {
+        setQuery("");
+        const weatherData = res.data;
+        setWeather(weatherData);
+      })
+      .catch((err) => {
+        console.log("error");
+      });
+  };
+  const onSubmit = (e) => {
+    e.preventDefault();
+    search();
   };
 
   return (
     <StyledApp>
       <h2>Meme Weather</h2>
       <div className="search-box">
-        <input
-          type="text"
-          className="search-bar"
-          placeholder="City, State"
-          onChange={(e) => setQuery(e.target.value)}
-          value={query}
-          onKeyPress={search}
-        ></input>
+        <form onSubmit={onSubmit}>
+          <input
+            type="text"
+            className="search-bar"
+            placeholder="City, State"
+            onChange={(e) => setQuery(e.target.value)}
+            value={query}
+          ></input>
+          <button>Send Location</button>
+        </form>
       </div>
 
       {weather === undefined ? (
