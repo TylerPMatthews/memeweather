@@ -17,8 +17,9 @@ const StyledApp = styled.div`
   input {
     text-align: center;
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 2px solid black;
     font-size: 1.3rem;
+   
   }
   .no-weather {
     text-align: center;
