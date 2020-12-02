@@ -17,7 +17,6 @@ const StyledApp = styled.div`
   input {
     text-align: center;
     box-sizing: border-box;
-    padding: 0% 5%;
     border: 1px solid black;
     font-size: 1.3rem;
   }
@@ -30,28 +29,31 @@ const StyledApp = styled.div`
     margin-left: 5%;
     font-family: "Architects Daughter", cursive;
   }
-  .code {
-    display: flex;
-    justify-content: center;
+  .send-button{
+    display:flex;
+    justify-content:center;
+    margin-top:5%;
   }
   button {
-    font-size: 1.2rem;
-    border-radius: 12px;
-    margin-bottom: 5%;
+    font-size: 1rem;
+    border-radius: 6px;
     color: red;
     background-color: black;
     border-color: red;
     font-family: "Architects Daughter", cursive;
+    text-align:center;
   }
   button:hover {
     color: white;
     border-color: white;
+    cursor:pointer;
   }
   footer p {
     text-align: center;
     font-family: "Architects Daughter", cursive;
     color: black;
   }
+ 
 `;
 function App() {
   const [query, setQuery] = useState("");
@@ -87,27 +89,21 @@ function App() {
             onChange={(e) => setQuery(e.target.value)}
             value={query}
           ></input>
-          <button>Send Location</button>
+          <div className='send-button'>
+          <button>Send Weather</button>
+          </div>
         </form>
       </div>
 
       {weather === undefined ? (
         <div className="no-weather">
           <p>No weather to display</p>
-          <p>Press the Enter key to submit City,State</p>
+          <p>Press Send Weather to submit your city , state</p>
         </div>
       ) : (
         <Weather weather={weather} />
       )}
-      <div className="code">
-        <button
-          onClick={(evt) => {
-            window.alert("Created by: https://github.com/TylerPMatthews");
-          }}
-        >
-          Creator
-        </button>
-      </div>
+
       <footer>
         <p>Meme Weather 2020</p>
       </footer>
