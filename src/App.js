@@ -52,7 +52,7 @@ const StyledApp = styled.div`
   footer p {
     text-align: center;
     font-family: "Architects Daughter", cursive;
-    color: black;
+    color: white;
   }
  
 `;

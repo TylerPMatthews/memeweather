@@ -6,7 +6,7 @@ const StyledWeather = styled.div`
   }
   p {
     text-align: center;
-    color: black;
+    color: white;
   }
   .date-container {
     display: flex;
@@ -27,6 +27,7 @@ const StyledWeather = styled.div`
   }
   .date-container {
     margin-bottom: 3%;
+    color:white;
   }
 
   .weather-container img {
