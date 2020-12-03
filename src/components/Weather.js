@@ -27,12 +27,17 @@ const StyledWeather = styled.div`
   }
   .date-container {
     margin-bottom: 3%;
-    color:white;
+    color: white;
   }
 
   .weather-container img {
     width: 5rem;
     height: 5rem;
+  }
+  .clear-button{
+    display:flex;
+    justify-content:center;
+    margin:5% 0;
   }
 `;
 
@@ -163,12 +168,6 @@ export default function Weather(props) {
               <img src={randomcoldDay} alt="sunny funny weather" />
             </div>
           ) : null}
-          {props.weather.current.temp_f < "39" &&
-          props.weather.current.condition.text === "Cloudy" ? ( //Cloudy cold weather
-            <div className="meme-container">
-              <img src={randomcoldDay} alt="sunny funny weather" />
-            </div>
-          ) : null}
 
           {props.weather.current.temp_f > "59" &&
           props.weather.current.condition.text === "Sunny" ? ( //Sunny warm weather
@@ -253,6 +252,9 @@ export default function Weather(props) {
             <p>Wind Direction: {props.weather.current.wind_dir}</p>
             <p>Humidity: {props.weather.current.humidity} %</p>
             <p>Feels like: {Math.round(props.weather.current.feelslike_f)} f</p>
+            <div className='clear-button'>
+            <button onClick={props.clearWeather}>Clear Weather</button>
+            </div>
           </div>
         </div>
       </main>

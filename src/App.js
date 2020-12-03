@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Weather from "./components/Weather";
 import axios from "axios";
@@ -53,12 +53,17 @@ const StyledApp = styled.div`
     text-align: center;
     font-family: "Architects Daughter", cursive;
     color: white;
+    margin:10% 0;
   }
  
 `;
 function App() {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState();
+ 
+  const clearWeather = () => {
+    setWeather(undefined)
+  }
   const search = (evt) => {
     axios
       .get(
@@ -102,7 +107,7 @@ function App() {
           <p>Press Send Weather to submit your city , state</p>
         </div>
       ) : (
-        <Weather weather={weather} />
+        <Weather weather={weather} clearWeather={clearWeather}/>
       )}
 
       <footer>
