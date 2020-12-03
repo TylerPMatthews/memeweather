@@ -158,7 +158,7 @@ export default function Weather(props) {
             </div>
           ) : null}
           {props.weather.current.temp_f < "39" &&
-          props.weather.current.condition.text === " Partly cloudy" ? ( //pCloudy cold weather
+          props.weather.current.condition.text === "Partly cloudy" ? ( //pCloudy cold weather
             <div className="meme-container">
               <img src={randomcoldDay} alt="sunny funny weather" />
             </div>
