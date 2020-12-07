@@ -96,7 +96,7 @@ function App() {
             value={query}
           ></input>
           <div className='send-button'>
-          <button>Send Weather</button>
+          <button>Send Location</button>
           </div>
         </form>
       </div>
@@ -104,7 +104,7 @@ function App() {
       {weather === undefined ? (
         <div className="no-weather">
           <p>No weather to display</p>
-          <p>Press Send Weather to submit your city , state</p>
+          <p>Press Send Location to submit your city , state</p>
         </div>
       ) : (
         <Weather weather={weather} clearWeather={clearWeather}/>
